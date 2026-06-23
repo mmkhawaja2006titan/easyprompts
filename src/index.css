@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Cinzel", "Playfair Display", serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "Space Mono", ui-monospace, monospace;
+}
+
+/* Base modifications for crisp Editorial Aesthetic */
+@layer base {
+  html, body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: var(--font-sans);
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #222222;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #444444;
+  }
+}
+
+/* Sharp Dot Grid overlay reminiscent of blueprint sheets */
+.editorial-grid {
+  background-image: radial-gradient(circle at center, #ffffff 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* High contrast sharp borders */
+.border-editorial {
+  border-color: #222222;
+}
+
+/* Simple sharp subtle neon accent instead of heavy round blurs */
+.sharp-accent {
+  box-shadow: 0 0 15px -5px rgba(255, 255, 255, 0.15);
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-scanline {
+  animation: scanline 4s linear infinite;
+}
+

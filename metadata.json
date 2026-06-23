@@ -1,0 +1,6 @@
+{
+  "name": "easyPrompts",
+  "description": "An AI-powered prompt generator that turns text, images, or video descriptions into high-quality, creative prompts for AI models.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
